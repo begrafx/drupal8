@@ -1,2 +1,3 @@
-# drupal8
-Drupal 8 boilerplate to set up Drupal projects.
+# Drupal 8 Boilerplate
+
+We use this basic boilerplate to set up our Drupal 8 projects.
