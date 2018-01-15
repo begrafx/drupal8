@@ -76,11 +76,6 @@
             "web/profiles/contrib/{$name}": ["type:drupal-profile"],
             "web/themes/contrib/{$name}": ["type:drupal-theme"],
             "drush/contrib/{$name}": ["type:drupal-drush"]
-        },
-        "scripts-dev": {
-            "post-install-cmd": [
-                "phpcs --config-set installed_paths ../../drupal/coder/coder_sniffer"
-            ]
         }
     }
 }
