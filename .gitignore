@@ -60,3 +60,8 @@ web/themes/custom/com4dev/assets
 web/styleguide
 
 libphp7.so
+
+# Ignore files only for this boilerplate.
+# ⚠️ Remove the following lines for usage in production ⚠️
+/web
+composer.lock
