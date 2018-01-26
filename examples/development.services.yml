@@ -1,0 +1,12 @@
+# Local development services. Disable cache & enable twig-debug for your local environment.
+#
+# Activate this file in your "settings.php"
+parameters:
+  http.response.debug_cacheability_headers: true
+  twig.config:
+    debug: true
+    auto_reload: true
+    cache: false
+services:
+  cache.backend.null:
+    class: Drupal\Core\Cache\NullBackendFactory
