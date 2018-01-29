@@ -1,13 +1,13 @@
 # Drupal 8 Boilerplate
 
-We use this basic boilerplate to set up our Drupal 8 projects.
+We use this basic boilerplate to set up our [Drupal 8](https://www.drupal.org/8) projects.
 
 ## Installation / Setup
 
-We are using composer for installing drupal.
+We are using [drupal composer](https://www.drupal.org/docs/develop/using-composer/using-composer-with-drupal) for installing drupal.
 
 ### Get your packages
-Install Drupal via composer:
+Install Drupal via [composer](https://getcomposer.org/):
 
     $ composer install 
 
@@ -47,10 +47,10 @@ Installation of new modules
 ## Optional Addons
 Based on your project, you can use some default addons.
 
-### Paragraphs
-[Paragraphs module]([Drupal Composer](https://www.drupal.org/docs/develop/using-composer/using-composer-with-drupal))
+### [Paragraphs](https://www.drupal.org/project/paragraphs)
 
-A module to add a new possibility to create content. 
+> Paragraphs is the new way of content creation!
+ It allows you — Site Builders — to make things cleaner so that you can give more editing power to your end-users.
 
     $ composer require drupal/paragraphs
     $ composer require drupal/paragraphs_edit
