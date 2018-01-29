@@ -4,14 +4,16 @@ We use this basic boilerplate to set up our [Drupal 8](https://www.drupal.org/8)
 
 ## Installation / Setup
 
-We are using [drupal composer](https://www.drupal.org/docs/develop/using-composer/using-composer-with-drupal) for installing drupal.
+We are using [Drupal Composer](https://www.drupal.org/docs/develop/using-composer/using-composer-with-drupal) for installing drupal.
 
 ### Get your packages
-Install Drupal via [composer](https://getcomposer.org/):
+
+Install Drupal via [Composer](https://getcomposer.org/):
 
     $ composer install 
 
 ### Create drupal-specific files
+
 You can find our small library with some basic files for your setup in the folder `./examples`.
 You can copy them to its original location. Probably you have to adapt its content first.
 
@@ -21,9 +23,11 @@ You can copy them to its original location. Probably you have to adapt its conte
 | `./examples/development.services.yml` | `./web/sites/development.services.yml` (file exists already) | **YES**, in `./web/sites/default/settings.php` |
 
 ### Connect the database
+
 Create database, setup the default drupal-installation, add the database-connection to the `./web/sites/default/settings.local.php`.
 
 ### Drupal installation
+
 Install and uninstall (not) required modules directly with `drush`.
 
     $ cd ./web
@@ -45,6 +49,7 @@ Installation of new modules
     $ drush en twig_field_value -y
     
 ## Optional Addons
+
 Based on your project, you can use some default addons.
 
 ### [Paragraphs](https://www.drupal.org/project/paragraphs)
