@@ -55,7 +55,8 @@ Based on your project, you can use some default addons.
 ### [Paragraphs](https://www.drupal.org/project/paragraphs)
 
 > Paragraphs is the new way of content creation!
- It allows you — Site Builders — to make things cleaner so that you can give more editing power to your end-users.
+ It allows you — Site Builders — to make things cleaner so that you
+ can give more editing power to your end-users.
 
     $ composer require drupal/paragraphs
     $ composer require drupal/paragraphs_edit
@@ -64,3 +65,18 @@ Based on your project, you can use some default addons.
     
     $ drush en paragraphs -y
     $ drush en paragraphs_edit -y
+
+### [Webform](https://www.drupal.org/project/webform)
+
+> Webform is the module for making forms and surveys in Drupal. After
+a submission customizable e-mails can be sent to administrators and/or
+submitters. Results can be exported into Excel or other spreadsheet
+applications.
+
+    $ composer require drupal/webform
+    
+    $ cd ./web
+    
+    $ drush en webform -y
+    $ drush en webform_ui -y
+    $ (optional) drush en webform_node -y
