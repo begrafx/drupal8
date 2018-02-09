@@ -6,10 +6,18 @@ We use this basic boilerplate to set up our [Drupal 8](https://www.drupal.org/8)
 
 We are using [Drupal Composer](https://www.drupal.org/docs/develop/using-composer/using-composer-with-drupal) for installing drupal.
 
+### Prepare your project-folder
+
+Create a new project-folder and add there the important documents:
+
+    $ cp composer.json PROJECT_DIRECTORY
+    $ cp -R scripts PROJECT_DIRECTORY/scripts
+
 ### Get your packages
 
 Install Drupal via [Composer](https://getcomposer.org/):
 
+    $ cd PROJECT_DIRECTORY
     $ composer install 
 
 ### Create drupal-specific files
@@ -24,14 +32,20 @@ You can copy them to its original location. Probably you have to adapt its conte
 
 ### Connect the database
 
-Create database, setup the default drupal-installation, add the database-connection to the `./web/sites/default/settings.local.php`.
+Create database and add the database-connection to the `./web/sites/default/settings.local.php`.
+
+Activate the out-commented `settings.local.php` in `./web/sites/default/settings.php` as included file.  
 
 ### Drupal installation
 
-Install and uninstall (not) required modules directly with `drush`.
+Check if `drush` is running.
 
     $ cd ./web
     $ drush st
+    
+Install drupal
+
+    $ drush site-install --account-mail=EMAIL_ADDRESS --account-pass=PASSWORD --site-name=PROJECT_NAME --site-mail=EMAIL_ADDRESS
 
 Deinstallation of unused modules
 
