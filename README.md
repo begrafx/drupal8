@@ -44,6 +44,18 @@ Installation of new modules
     $ drush en redirect -y
     $ drush en twig_field_value -y
     
+## Coding standards
+
+We follow the [Drupal Coding standards](https://www.drupal.org/docs/develop/standards/coding-standards) and we check this in
+our projects by using [PHP_CodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer) in connection with the Drupal Module
+[drupal_coder](https://www.drupal.org/project/coder).
+
+But we deregulated the guidelines a little bit and created our own guidelines. You can find everything here in the `phpcs.xml.dist`.
+
+After the installation via composer you will be able to check your project by running:
+
+    $ ./vendor/bin/phpcs
+
 ## Optional Addons
 Based on your project, you can use some default addons.
 
