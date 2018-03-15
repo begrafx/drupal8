@@ -63,7 +63,7 @@
         ],
         "post-install-cmd": [
             "DrupalProject\\composer\\ScriptHandler::createRequiredFiles",
-            "test -e ./vendor/bin/phpcs && ./vendor/bin/phpcs --config-set installed_paths ../../drupal/coder/coder_sniffer || echo no phpcs found - installed_paths not set"
+            "test -e ./vendor/bin/phpcs && ./vendor/bin/phpcs --config-set installed_paths ../../drupal/coder/coder_sniffer || echo 'no phpcs found - installed_paths not set'"
         ],
         "post-update-cmd": [
             "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
