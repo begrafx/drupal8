@@ -51,6 +51,7 @@ Deinstallation of unused modules
 
     $ drush pmu field_layout -y
     $ drush pmu layout_discovery -y
+    $ drush pmu contact -y
 
 Installation of new modules
 
@@ -61,6 +62,7 @@ Installation of new modules
     $ drush en metatag -y
     $ drush en redirect -y
     $ drush en twig_field_value -y
+    $ drush en pathauto -y
     
 ## Coding standards
 
