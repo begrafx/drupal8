@@ -21,7 +21,7 @@ Make sure to remove the indicated rules at the bottom of the `.gitignore` file.
 
 Install Drupal and additional modules included in this repository via [Composer](https://getcomposer.org/):
 
-```
+```bash
 cd PROJECT_DIRECTORY
 composer install
 ```  
@@ -45,20 +45,20 @@ Copy them to the intended location and edit the files according to your needs.
 
 Check if `drush` is running.
 
-```
+```bash
 cd ./web
 drush st
 ```
     
 Install Drupal
 
-```
+```bash
 drush site-install --account-name=gridonic --account-pass=PASSWORD --account-mail=EMAIL_ADDRESS --site-name=PROJECT_NAME --site-mail=EMAIL_ADDRESS
 ```
 
 Uninstall unnecessary modules
 
-```
+```bash
 drush pmu field_layout -y
 drush pmu layout_discovery -y
 drush pmu contact -y
@@ -67,7 +67,7 @@ drush pmu tour -y
 
 Install additional modules
 
-```
+```bash
 drush en admin_toolbar -y
 drush en admin_toolbar_tools -y
 drush en environment_indicator -y
@@ -79,9 +79,9 @@ drush en pathauto -y
 drush en config_ignore -y
 ```    
 
-In case of multilanguage support
+In case of multi-language support
 
-```
+```bash
 drush en language -y
 drush en locale -y
 drush en content_translation -y
@@ -96,7 +96,9 @@ A deregulated set of rules can be found in the `phpcs.xml.dist` file included in
 
 You can check the code style by executing
 
-    $ ./vendor/bin/phpcs
+```bash
+./vendor/bin/phpcs
+```
 
 ## Optional modules
 
@@ -108,13 +110,13 @@ Based on the requirements of your project, we recommend to install the following
  It allows you — Site Builders — to make things cleaner so that you
  can give more editing power to your end-users.
 
-    $ composer require drupal/paragraphs
-    $ composer require drupal/paragraphs_edit
-    
-    $ cd ./web
-    
-    $ drush en paragraphs -y
-    $ drush en paragraphs_edit -y
+```bash
+composer require drupal/paragraphs
+composer require drupal/paragraphs_edit
+cd ./web
+drush en paragraphs -y
+drush en paragraphs_edit -y
+```
 
 ### [Webform](https://www.drupal.org/project/webform)
 
@@ -123,10 +125,11 @@ a submission customizable e-mails can be sent to administrators and/or
 submitters. Results can be exported into Excel or other spreadsheet
 applications.
 
-    $ composer require drupal/webform
-    
-    $ cd ./web
-    
-    $ drush en webform -y
-    $ drush en webform_ui -y
-    $ (optional) drush en webform_node -y
+```bash
+composer require drupal/webform
+cd ./web
+drush en webform -y
+drush en webform_ui -y
+# optional
+drush en webform_node -y
+```
