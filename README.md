@@ -4,37 +4,40 @@ We use this basic boilerplate to set up our [Drupal 8](https://www.drupal.org/8)
 
 ## Installation / Setup
 
-We are using [Drupal Composer](https://www.drupal.org/docs/develop/using-composer/using-composer-with-drupal) for installing drupal.
+We use [Drupal Composer](https://www.drupal.org/docs/develop/using-composer/using-composer-with-drupal) for installing drupal.
 
 ### Prepare your project-folder
 
-Create a new project-folder and add there the important documents:
+Create a new project-folder and copy the following files from this repository:
 
-    $ cp composer.json PROJECT_DIRECTORY
-    $ cp -R scripts PROJECT_DIRECTORY/scripts
+* composer.json
+* scripts 
+* .gitignore
+* phpcs.xml.dist
 
-### Get your packages
+Make sure to remove the indicated rules at the bottom of the `.gitignore` file. 
 
-Install Drupal via [Composer](https://getcomposer.org/):
+### Install PHP dependencies
+
+Install Drupal and additional modules included in this repository via [Composer](https://getcomposer.org/):
 
     $ cd PROJECT_DIRECTORY
     $ composer install 
 
-### Create drupal-specific files
+### Drupal configuration
 
-You can find our small library with some basic files for your setup in the folder `./examples`.
-You can copy them to its original location. Probably you have to adapt its content first.
+The `./examples` folder contains some configuration files with recommended default values for the local development.
+Copy them to the intended location and edit the files according to your needs. 
 
 | Example File | Target Location | Enable? |
 | --- | --- | --- |
 | `./examples/settings.local.php` | `./web/sites/default/settings.local.php` | **YES**, in `./web/sites/default/settings.php` |
 | `./examples/development.services.yml` | `./web/sites/development.services.yml` (file exists already) | **YES**, in `./web/sites/default/settings.php` |
 
-### Connect the database
+### Setup database
 
-Create database and add the database-connection to the `./web/sites/default/settings.local.php`.
-
-Activate the out-commented `settings.local.php` in `./web/sites/default/settings.php` as included file.  
+* Create database and add the connection details and credentials to `./web/sites/default/settings.local.php`.
+* Activate the commented-out `settings.local.php` in `./web/sites/default/settings.php` so that the local settings file gets included.  
 
 ### Drupal installation
 
@@ -43,17 +46,17 @@ Check if `drush` is running.
     $ cd ./web
     $ drush st
     
-Install drupal
+Install Drupal
 
     $ drush site-install --account-mail=EMAIL_ADDRESS --account-pass=PASSWORD --site-name=PROJECT_NAME --site-mail=EMAIL_ADDRESS
 
-Deinstallation of unused modules
+Uninstall unnecessary modules
 
     $ drush pmu field_layout -y
     $ drush pmu layout_discovery -y
     $ drush pmu contact -y
 
-Installation of new modules
+Install additional modules
 
     $ drush en admin_toolbar -y
     $ drush en admin_toolbar_tools -y
@@ -66,19 +69,17 @@ Installation of new modules
     
 ## Coding standards
 
-We follow the [Drupal Coding standards](https://www.drupal.org/docs/develop/standards/coding-standards) and we check this in
-our projects by using [PHP_CodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer) in connection with the Drupal Module
+We follow the [Drupal Coding standards](https://www.drupal.org/docs/develop/standards/coding-standards) and by using [PHP_CodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer) in connection with the Drupal Module
 [drupal_coder](https://www.drupal.org/project/coder).
+A deregulated set of rules can be found in the `phpcs.xml.dist` file included in this repository.
 
-But we deregulated the guidelines a little bit and created our own guidelines. You can find everything here in the `phpcs.xml.dist`.
-
-After the installation via composer you will be able to check your project by running:
+You can check the code style by executing
 
     $ ./vendor/bin/phpcs
 
-## Optional Addons
+## Optional modules
 
-Based on your project, you can use some default addons.
+Based on the requirements of your project, we recommend to install the following Drupal modules.
 
 ### [Paragraphs](https://www.drupal.org/project/paragraphs)
 
