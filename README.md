@@ -76,6 +76,7 @@ drush en metatag -y
 drush en redirect -y
 drush en twig_field_value -y
 drush en pathauto -y
+drush en config_ignore -y
 ```    
 
 In case of multilanguage support
