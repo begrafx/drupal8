@@ -21,8 +21,10 @@ Make sure to remove the indicated rules at the bottom of the `.gitignore` file.
 
 Install Drupal and additional modules included in this repository via [Composer](https://getcomposer.org/):
 
-    $ cd PROJECT_DIRECTORY
-    $ composer install 
+```
+cd PROJECT_DIRECTORY
+composer install
+```  
 
 ### Drupal configuration
 
@@ -43,30 +45,48 @@ Copy them to the intended location and edit the files according to your needs.
 
 Check if `drush` is running.
 
-    $ cd ./web
-    $ drush st
+```
+cd ./web
+drush st
+```
     
 Install Drupal
 
-    $ drush site-install --account-mail=EMAIL_ADDRESS --account-pass=PASSWORD --site-name=PROJECT_NAME --site-mail=EMAIL_ADDRESS
+```
+drush site-install --account-name=gridonic --account-pass=PASSWORD --account-mail=EMAIL_ADDRESS --site-name=PROJECT_NAME --site-mail=EMAIL_ADDRESS
+```
 
 Uninstall unnecessary modules
 
-    $ drush pmu field_layout -y
-    $ drush pmu layout_discovery -y
-    $ drush pmu contact -y
+```
+drush pmu field_layout -y
+drush pmu layout_discovery -y
+drush pmu contact -y
+drush pmu tour -y
+```
 
 Install additional modules
 
-    $ drush en admin_toolbar -y
-    $ drush en admin_toolbar_tools -y
-    $ drush en environment_indicator -y
-    $ drush en field_group -y
-    $ drush en metatag -y
-    $ drush en redirect -y
-    $ drush en twig_field_value -y
-    $ drush en pathauto -y
-    
+```
+drush en admin_toolbar -y
+drush en admin_toolbar_tools -y
+drush en environment_indicator -y
+drush en field_group -y
+drush en metatag -y
+drush en redirect -y
+drush en twig_field_value -y
+drush en pathauto -y
+```    
+
+In case of multilanguage support
+
+```
+drush en language -y
+drush en locale -y
+drush en content_translation -y
+drush en config_translation -y
+```
+
 ## Coding standards
 
 We follow the [Drupal Coding standards](https://www.drupal.org/docs/develop/standards/coding-standards) and by using [PHP_CodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer) in connection with the Drupal Module
