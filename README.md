@@ -63,6 +63,7 @@ drush pmu field_layout -y
 drush pmu layout_discovery -y
 drush pmu contact -y
 drush pmu tour -y
+drush pmu search -y
 ```
 
 Install additional modules
@@ -77,6 +78,8 @@ drush en redirect -y
 drush en twig_field_value -y
 drush en pathauto -y
 drush en config_ignore -y
+drush en simple_sitemap -y
+drush en swiftmailer -y
 ```    
 
 In case of multi-language support
@@ -132,4 +135,16 @@ drush en webform -y
 drush en webform_ui -y
 # optional
 drush en webform_node -y
+```
+
+### [Video Embed Field](https://www.drupal.org/project/video_embed_field)
+
+> Video Embed field creates a simple field type that allows you to embed videos 
+from YouTube and Vimeo and show their thumbnail previews simply by entering 
+the video's url. 
+
+```bash
+composer require drupal/video_embed_field
+cd ./web
+drush en video_embed_field -y
 ```
