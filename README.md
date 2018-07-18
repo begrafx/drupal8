@@ -64,6 +64,7 @@ drush pmu layout_discovery -y
 drush pmu contact -y
 drush pmu tour -y
 drush pmu search -y
+drush pmu update -y
 ```
 
 Install additional modules
@@ -80,6 +81,7 @@ drush en pathauto -y
 drush en config_ignore -y
 drush en simple_sitemap -y
 drush en swiftmailer -y
+drush en honeypot -y
 ```    
 
 In case of multi-language support

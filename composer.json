@@ -30,6 +30,7 @@
         "drupal/config_ignore": "^2.1",
         "drupal/simple_sitemap": "^2.12",
         "drupal/swiftmailer": "^1.0@beta",
+        "drupal/honeypot": "^1.27",
         "drush/drush": "~8.0",
         "webflo/drupal-finder": "^1.0.0",
         "webmozart/path-util": "^2.3"
